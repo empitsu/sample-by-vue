@@ -6,6 +6,13 @@
   </button>
 </template>
 
+<script>
+export default {
+  name: 'Button',
+  props: {
+  }
+}
+</script>
 <style module>
 .button {
   border-radius: $g-border-radius;

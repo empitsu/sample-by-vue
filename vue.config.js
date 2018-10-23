@@ -9,5 +9,14 @@ module.exports = {
         data: `@import "@/assets/stylesheets/_variables.scss";`
       }
     }
+  },
+
+  pluginOptions: {
+    'style-resources-loader': {
+      preProcessor: 'scss',
+      patterns:
+      [
+      ]
+    }
   }
 }
