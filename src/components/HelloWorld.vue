@@ -53,6 +53,15 @@ li {
   margin: 0 10px;
 }
 a {
-  color: #42b983;
+  color: $g-color-link;
+}
+a:hover {
+  color: $g-color-link-hover;
+}
+a:active {
+  color: $g-color-link-active;
+}
+a:visited {
+  color: $g-color-link-visited;
 }
 </style>

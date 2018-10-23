@@ -1,0 +1,73 @@
+// Color palette
+$g-color-white: #fff;
+$g-color-black: #000;
+$g-color-gray-100: #f6f6f6;
+$g-color-gray-200: #e9ecef;
+$g-color-gray-300: #ddd;
+$g-color-gray-400: #ced4da;
+$g-color-gray-500: #adb5bd;
+$g-color-gray-600: #8c8c8c;
+$g-color-gray-700: #495057;
+$g-color-gray-800: #343a40;
+$g-color-gray-900: #1a1a1a;
+$g-color-cream: #F0F1D5;
+$g-color-blue: #2C8693;
+$g-color-navy: #105187;
+$g-color-red: #C33325;
+$g-color-orange: #F19722;
+
+
+// layer of blanding
+$g-color-base: $g-color-cream;
+$g-color-link: $g-color-blue;
+$g-color-link-visited: $g-color-navy;
+$g-color-link-hover: $g-color-navy;
+$g-color-link-active: $g-color-navy;
+$g-color-success: $g-color-blue;
+$g-color-danger: $g-color-orange;
+$g-color-warning: $g-color-red;
+$g-color-info: $g-color-gray-600;
+$g-color-primary: $g-color-navy;
+$g-color-secondary: $g-color-blue;
+
+// Layer of media
+$g-text-color: $g-color-gray-900;
+$g-color-text-outlined: $g-color-white;
+
+// Fonts
+$g-font-size-xxs: none;
+$g-font-size-xs: .6rem;
+$g-font-size-s: .8rem;
+$g-font-size-m: 1rem;
+$g-font-size-l: 1.2rem;
+$g-font-size-xl: 1.4rem;
+$g-font-size-xxl: 1.6rem;
+$g-font-size-xxxl: 1.8rem;
+$g-font-size-xxxxl: 2.0rem;
+
+$g-font-weight-default: 400;
+$g-font-weight-bold: 700;
+
+// Space
+$g-spacer: .5rem;
+
+// Components
+$g-border-width: 1px;
+$g-border-style: solid;
+$g-border-color: $g-color-gray-300;
+$g-border-radius: 2px;
+$g-border: $g-border-width $g-border-style $g-border-color;
+
+/* フィードバックの定義（媒体に最適化したフィードバック・デザイン要素） */
+$g-hover-feedback-opacity: .7;
+
+// Animation
+$g-hover-animation-duration: .1s;
+$g-hover-animation-timing: ease-out;
+$g-hover-animation: $g-hover-animation-duration $g-hover-animation-timing;
+$g-fade-animation-duration: .2s;
+$g-fade-animation-timing: linear;
+$g-fade-animation: $g-fade-animation-duration $g-fade-animation-timing;
+
+// z-index
+$g-z-header: 10;
