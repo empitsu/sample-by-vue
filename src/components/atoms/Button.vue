@@ -1,12 +1,12 @@
 <template>
-  <button type="button" class="button">
+  <button type="button" :class="$style.button">
     <slot>
       default Button Text
     </slot>
   </button>
 </template>
 
-<style scoped lang="scss">
+<style module>
 .button {
   border-radius: $g-border-radius;
   border: $g-border;
