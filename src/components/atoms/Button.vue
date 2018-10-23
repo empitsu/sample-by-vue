@@ -1,5 +1,5 @@
 <template>
-  <button type="button" :class="$style.button">
+  <button type="button" :class="$style.button" @click="onClick">
     <slot>
       default Button Text
     </slot>
@@ -8,8 +8,11 @@
 
 <script>
 export default {
-  name: 'Button',
-  props: {
+  name: 'atoms-button',
+  methods: {
+    onClick () {
+      this.$emit('click')
+    }
   }
 }
 </script>
