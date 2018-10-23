@@ -4,11 +4,11 @@ import { action } from '@storybook/addon-actions'
 import { linkTo } from '@storybook/addon-links'
 
 import MyButton from '../components/MyButton.vue'
-import Button from '../components/atoms/Button.vue'
+import AtomsButton from '../components/atoms/Button.vue'
 
 storiesOf('Atoms-Button', module)
   .add('with Text', () => ({
-    components: { Button },
+    components: { AtomsButton },
     template: '<atoms-button @click="action">atoms Button</atoms-button>',
     methods: { action: action('clicked!') }
   }))
