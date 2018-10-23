@@ -13,7 +13,7 @@ export default {
   }
 }
 </script>
-<style module>
+<style lang="scss" module>
 .button {
   border-radius: $g-border-radius;
   border: $g-border;
