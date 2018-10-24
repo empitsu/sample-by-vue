@@ -5,7 +5,7 @@
         <AtomsButton>accordion default title</AtomsButton>
       </slot>
     </div>
-    <transition v-on:before-enter="onBeforeEnter" v-on:enter="onEnter" v-on:after-enter="onAfterEnter" v-on:before-leave="onBeforeLeave" v-on:leave="onLeave" v-on:after-leave="onAfterLeave">
+    <transition v-on:before-enter="onBeforeEnter" v-on:enter="onEnter" v-on:before-leave="onBeforeLeave" v-on:leave="onLeave">
       <div v-show="visible" :class="$style.accordion__body">
         <slot>
           <ul>
@@ -39,19 +39,11 @@ export default {
     onEnter (el, done) {
       el.style.height = el.scrollHeight + 'px'
     },
-    onAfterEnter (el) {
-      el.style.height = ''
-    },
     onBeforeLeave (el) {
-      console.log('onBeforeLeave')
       el.style.height = el.scrollHeight + 'px'
     },
     onLeave (el, done) {
-      console.log('onLeave')
       el.style.height = 0
-    },
-    onAfterLeave (el) {
-      el.style.height = ''
     }
   }
 }
@@ -60,16 +52,6 @@ export default {
 .accordion {
   overflow: hidden;
 
-  &__header {
-    // button {
-    //   appearance: none;
-    //   border-color: transparent;
-    //   box-shadow: none;
-    //   text-shadow: none;
-    //   background-color: transparent;
-    //   background-image: none
-    // }
-  }
   &__body {
     overflow: hidden;
     transition: opacity 0.5s, height 0.5s ease-out;

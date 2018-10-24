@@ -30,16 +30,16 @@ storiesOf('Accordion', module)
         <atoms-button slot="header" style="background-color: #eee">custom button title</atoms-button>
         <ul>
           <li>
-            contentttt
+            item1
           </li>
           <li>
-            contentttt
+            item2
           </li>
           <li>
-            contentttt
+            item3
           </li>
           <li>
-            contentttt
+            item4
           </li>
         </ul>
       </atoms-accordion>`,
