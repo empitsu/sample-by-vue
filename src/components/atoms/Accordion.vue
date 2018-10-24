@@ -27,8 +27,7 @@ export default {
       default: false
     }
   },
-  // don't use arrow function, or we can't access props by using  `this.propname`.
-  data: function () {
+  data () {
     return {
       visible: this.isVisible
     }
