@@ -14,6 +14,12 @@ storiesOf('Accordion', module)
       `<atoms-accordion @click="action" />`,
     methods: { action: action('clicked!') }
   }))
+  .add('start with open', () => ({
+    components: { AtomsAccordion },
+    template:
+      `<atoms-accordion @click="action" :is-visible="true" />`,
+    methods: { action: action('clicked!') }
+  }))
   .add('link header & simple content', () => ({
     components: { AtomsAccordion },
     template:

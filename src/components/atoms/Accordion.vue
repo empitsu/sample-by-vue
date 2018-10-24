@@ -21,9 +21,16 @@
 import AtomsButton from './Button.vue'
 export default {
   name: 'atoms-accordion',
-  data: () => {
+  props: {
+    'isVisible': {
+      type: Boolean,
+      default: false
+    }
+  },
+  // don't use arrow function, or we can't access props by using  `this.propname`.
+  data: function () {
     return {
-      visible: true
+      visible: this.isVisible
     }
   },
   components: {
