@@ -5,6 +5,46 @@ import { linkTo } from '@storybook/addon-links'
 
 import MyButton from '../components/MyButton.vue'
 import AtomsButton from '../components/atoms/Button.vue'
+import AtomsAccordion from '../components/atoms/Accordion.vue'
+
+storiesOf('Accordion', module)
+  .add('default', () => ({
+    components: { AtomsAccordion },
+    template:
+      `<atoms-accordion @click="action" />`,
+    methods: { action: action('clicked!') }
+  }))
+  .add('link header & simple content', () => ({
+    components: { AtomsAccordion },
+    template:
+      `<atoms-accordion @click="action">
+        <a slot="header">custom link header</a>
+        <p>contents</p>
+      </atoms-accordion>`,
+    methods: { action: action('clicked!') }
+  }))
+  .add('button & lists', () => ({
+    components: { AtomsAccordion, AtomsButton },
+    template:
+      `<atoms-accordion @click="action">
+        <atoms-button slot="header" style="background-color: #eee">custom button title</atoms-button>
+        <ul>
+          <li>
+            contentttt
+          </li>
+          <li>
+            contentttt
+          </li>
+          <li>
+            contentttt
+          </li>
+          <li>
+            contentttt
+          </li>
+        </ul>
+      </atoms-accordion>`,
+    methods: { action: action('clicked!') }
+  }))
 
 storiesOf('Atoms-Button', module)
   .add('with Text', () => ({
@@ -13,7 +53,7 @@ storiesOf('Atoms-Button', module)
     methods: { action: action('clicked!') }
   }))
 
-storiesOf('Button', module)
+storiesOf('Sample-Button', module)
   .add('with text', () => ({
     components: { MyButton },
     template: '<my-button @click="action">Hello Button</my-button>',
