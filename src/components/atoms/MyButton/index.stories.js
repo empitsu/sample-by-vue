@@ -1,10 +1,13 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
+import VueInfoAddon from 'storybook-addon-vue-info'
 
 import MyButton from './MyButton.vue'
 
+
 storiesOf('atoms/MyButton', module)
+  .addDecorator(VueInfoAddon)
   .add('button tag', () => ({
     components: { MyButton },
     template: '<MyButton @click="action">atoms Button</MyButton>',

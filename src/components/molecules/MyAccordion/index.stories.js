@@ -1,11 +1,13 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
+import VueInfoAddon from 'storybook-addon-vue-info'
 
 import MyButton from '@/components/atoms/MyButton/MyButton.vue'
 import MyAccordion from './MyAccordion.vue'
 
 storiesOf('molecules/MyAccordion', module)
+  .addDecorator(VueInfoAddon)
   .add('default', () => ({
     components: { MyAccordion },
     template:
