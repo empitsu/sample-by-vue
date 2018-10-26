@@ -7,7 +7,7 @@ import MyButton from '../components/MyButton.vue'
 import AtomsButton from '../components/atoms/Button.vue'
 import AtomsAccordion from '../components/atoms/Accordion.vue'
 
-storiesOf('Accordion', module)
+storiesOf('atoms - Accordion', module)
   .add('default', () => ({
     components: { AtomsAccordion },
     template:
@@ -52,10 +52,15 @@ storiesOf('Accordion', module)
     methods: { action: action('clicked!') }
   }))
 
-storiesOf('Atoms-Button', module)
-  .add('with Text', () => ({
+storiesOf('atoms-Button', module)
+  .add('button tag', () => ({
     components: { AtomsButton },
-    template: '<atoms-button @click="action">atoms Button</atoms-button>',
+    template: '<atoms-button tag="button" type="button" @click="action">atoms Button</atoms-button>',
+    methods: { action: action('clicked!') }
+  }))
+  .add('a tag', () => ({
+    components: { AtomsButton },
+    template: '<atoms-button tag="a" href="#examplelink" @click="action">atoms Button</atoms-button>',
     methods: { action: action('clicked!') }
   }))
 
