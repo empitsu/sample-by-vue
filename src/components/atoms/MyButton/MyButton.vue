@@ -1,5 +1,5 @@
 <template>
-  <component v-bind:is="tag" v-bind:href="href" v-bind:type="type" v-bind:class="$style.button" @click="onClick">
+  <component v-bind:is="tag" v-bind:href="href" v-bind:type="buttonType" v-bind:class="$style.button" @click="onClick">
     <slot>
       default Button Text
     </slot>
@@ -8,11 +8,20 @@
 
 <script>
 export default {
-  name: 'atoms-button',
+  name: 'MyButton',
   props: {
-    tag: String,
+    tag: {
+      default: 'button',
+      type: String
+    },
     href: String,
     type: String
+  },
+  computed: {
+    buttonType () {
+      if (this.type) return this.type
+      if (this.tag === 'button') return 'button'
+    }
   },
   methods: {
     onClick () {

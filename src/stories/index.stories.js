@@ -4,65 +4,6 @@ import { action } from '@storybook/addon-actions'
 import { linkTo } from '@storybook/addon-links'
 
 import MyButton from '../components/MyButton.vue'
-import AtomsButton from '../components/atoms/Button.vue'
-import AtomsAccordion from '../components/atoms/Accordion.vue'
-
-storiesOf('atoms - Accordion', module)
-  .add('default', () => ({
-    components: { AtomsAccordion },
-    template:
-      `<atoms-accordion @click="action" />`,
-    methods: { action: action('clicked!') }
-  }))
-  .add('start with open', () => ({
-    components: { AtomsAccordion },
-    template:
-      `<atoms-accordion @click="action" :is-visible="true" />`,
-    methods: { action: action('clicked!') }
-  }))
-  .add('link header & simple content', () => ({
-    components: { AtomsAccordion },
-    template:
-      `<atoms-accordion @click="action">
-        <a slot="header">custom link header</a>
-        <p>contents</p>
-      </atoms-accordion>`,
-    methods: { action: action('clicked!') }
-  }))
-  .add('button & lists', () => ({
-    components: { AtomsAccordion, AtomsButton },
-    template:
-      `<atoms-accordion @click="action">
-        <atoms-button slot="header" style="background-color: #eee">custom button title</atoms-button>
-        <ul>
-          <li>
-            item1
-          </li>
-          <li>
-            item2
-          </li>
-          <li>
-            item3
-          </li>
-          <li>
-            item4
-          </li>
-        </ul>
-      </atoms-accordion>`,
-    methods: { action: action('clicked!') }
-  }))
-
-storiesOf('atoms-Button', module)
-  .add('button tag', () => ({
-    components: { AtomsButton },
-    template: '<atoms-button tag="button" type="button" @click="action">atoms Button</atoms-button>',
-    methods: { action: action('clicked!') }
-  }))
-  .add('a tag', () => ({
-    components: { AtomsButton },
-    template: '<atoms-button tag="a" href="#examplelink" @click="action">atoms Button</atoms-button>',
-    methods: { action: action('clicked!') }
-  }))
 
 storiesOf('Sample-Button', module)
   .add('with text', () => ({

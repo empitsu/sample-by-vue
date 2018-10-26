@@ -2,7 +2,7 @@
   <div :class="$style.accordion">
     <div v-bind:class="[$style.accordion__header, { open: visible }]" v-on:click="onClick">
       <slot name="header">
-        <AtomsButton>accordion default title</AtomsButton>
+        <MyButton>accordion default title</MyButton>
       </slot>
     </div>
     <transition v-on:before-enter="onBeforeEnter" v-on:enter="onEnter" v-on:before-leave="onBeforeLeave" v-on:leave="onLeave">
@@ -18,9 +18,9 @@
 </template>
 
 <script>
-import AtomsButton from './Button.vue'
+import MyButton from '@/components/atoms/MyButton/MyButton.vue'
 export default {
-  name: 'atoms-accordion',
+  name: 'MyAccordion',
   props: {
     'isVisible': {
       type: Boolean,
@@ -33,7 +33,7 @@ export default {
     }
   },
   components: {
-    AtomsButton
+    MyButton
   },
   methods: {
     onClick () {
