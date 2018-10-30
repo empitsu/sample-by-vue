@@ -28,7 +28,10 @@ export default {
     },
     href: String,
     type: String,
-    className: String
+    className: {
+      default: 'normal',
+      type: String
+    }
   },
   computed: {
     buttonType () {
@@ -62,7 +65,6 @@ export default {
   padding: .8rem;
   text-decoration: none;
   transition: opacity $g-hover-animation;
-  border: $g-border;
 }
 
 .button:hover {
