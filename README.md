@@ -24,3 +24,9 @@ npm run test
 ```
 npm run lint
 ```
+
+### Build storybook
+```
+npm run serve:storybook
+```
+
