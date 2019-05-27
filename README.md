@@ -1,4 +1,4 @@
-# sample-by-vue
+# atomic-design-components-by-vue
 
 ## Project setup
 ```
